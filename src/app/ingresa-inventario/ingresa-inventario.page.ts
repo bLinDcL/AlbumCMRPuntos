@@ -174,26 +174,28 @@ export class IngresaInventarioPage implements OnInit {
     }  
     
     escanearCodigoBarra(){
+      // Obtiene localizacion
       this.getCurrentCoordinates();
-      this.getPicture();
-      // this.barcodeScanner.scan().then(barcodeData => {
-      //   this.codigo_barra_fleje = barcodeData['text'];
-      //   alert('Escanear Codigo barra producto ');
-      //   this.barcodeScanner.scan().then(barcodeData => {
-      //     this.codigo_barra_producto = barcodeData['text'];
-      //     if(this.codigo_barra_fleje === this.codigo_barra_producto){
-      //       this.fleje_producto = true;
-      //       alert('Producto Corresponde a Fleje');
-      //     }else{
-      //       this.fleje_producto = false;
-      //       alert('El Producto NO corresponde a Fleje !');
-      //     }
-      //   }).catch(err => {
-      //     alert('Error 1 = '+ err);
-      //   });
-      // }).catch(err => {
-      //   alert('Error 2 = '+ err);
-      // });
+
+      // Escaner QR
+      this.barcodeScanner.scan().then(barcodeData => {
+        this.codigo_barra_fleje = barcodeData['text'];
+        alert('Escanear Codigo barra producto ');
+        this.barcodeScanner.scan().then(barcodeData => {
+          this.codigo_barra_producto = barcodeData['text'];
+          if(this.codigo_barra_fleje === this.codigo_barra_producto){
+            this.fleje_producto = true;
+            alert('Producto Corresponde a Fleje');
+          }else{
+            this.fleje_producto = false;
+            alert('El Producto NO corresponde a Fleje !');
+          }
+        }).catch(err => {
+          alert('Error 1 = '+ err);
+        });
+      }).catch(err => {
+        alert('Error 2 = '+ err);
+      });
     }
     
     cameraOptions: CameraOptions = {
@@ -213,16 +215,6 @@ export class IngresaInventarioPage implements OnInit {
        }).catch((error) => {
          console.log('Error getting location', error);
        });
-    }
-    
-    getPicture(){
-      this.camera.getPicture(this.cameraOptions).then((imageData) => {
-        // imageData is either a base64 encoded string or a file URI
-        // If it's base64 (DATA_URL):
-        let base64Image = 'data:image/jpeg;base64,' + imageData;
-        }, (err) => {
-          console.log('Error ', err);
-        });
     }
     
   }
