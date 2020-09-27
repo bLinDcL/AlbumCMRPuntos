@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <h1><ion-text color="light">Preferencias</ion-text></h1>
+    </ion-title>
+    <ion-icon name="person-outline" slot="person-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header> 
+<ion-content padding>
+  <form  (ngSubmit)="goMisiones()" novalidate>
+    <ion-list>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/dress.png">
+        </ion-avatar>
+        <ion-label>Mujer</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/shirts.png">
+        </ion-avatar>
+        <ion-label>Hombre</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/train-toy.png">
+        </ion-avatar>
+        <ion-label>Niños y juguetería</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/shoe.png">
+        </ion-avatar>
+        <ion-label>Zapatos</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/football-ball.png">
+        </ion-avatar>
+        <ion-label>Deportes</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/smartphone.png">
+        </ion-avatar>
+        <ion-label>Telefonía</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/monitor.png">
+        </ion-avatar>
+        <ion-label>Tecnología</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/washer.png">
+        </ion-avatar>
+        <ion-label>Electro</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/bed.png">
+        </ion-avatar>
+        <ion-label>Dormitorio</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="assets/icon/armchair.png">
+        </ion-avatar>
+        <ion-label>Mueble</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" expand="block">Aceptar</ion-button>
+  </form>
+</ion-content> 

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center">SubTareas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item  *ngFor="let item of (lista_subtareas)">
+      <ion-label (click)="goToIngresarEvidencia(item,item.id_usutar)"  color="{{item.color_categoria}}" >
+          <h1>{{item.sku_producto}}</h1>
+          <h2>{{item.desc_producto}} </h2>
+          <!-- <p>{{ item.desc_producto }}</p> -->
+      </ion-label>    
+    </ion-item> 
+  </ion-list> 
+</ion-content>   

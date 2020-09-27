@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <img [src]="img" class="card-img-top img-fluid">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">RUT</ion-label>
+      <ion-input type="text" [(ngModel)]="login.documentNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Constraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="login.password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="LogIn()" expand="full">Entrar</ion-button>
+  <img src="assets/icon/logo.png" class="card-img-center img-fluid" style="align-items: center">
+</ion-content>
+
+<img src="assets/icon/Logos-web.webp" class="card-img-top img-fluid">

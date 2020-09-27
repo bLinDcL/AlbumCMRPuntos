@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar class="ion-padding-vertical">
+    <ion-title><h1><ion-text color="light">ESCÁNER QR</ion-text></h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item position="floating" lines="none">
+    <img src="assets/icon/review.png">
+    <ion-text class="ion-padding">
+      <p>Califica que te parece el producto</p>
+    </ion-text>
+  </ion-item>
+  <ion-item position="floating" lines="none">
+    <img src="assets/icon/camera.png">
+    <ion-text class="ion-padding">
+      <p>Abre tu cámara y escanea el código QR</p>
+    </ion-text>
+  </ion-item>
+  <ion-item position="floating">
+    <img src="assets/icon/bolt.png">
+    <ion-text class="ion-padding">
+      <p>Activa el flash en caso de poca iluminación</p>
+    </ion-text>
+  </ion-item>
+  <hr>
+  <ion-item lines="none">
+    <ion-list>
+      <ion-radio-group value="grape">
+        <ion-list-header>
+          <ion-label><h1>Califica</h1></ion-label>
+        </ion-list-header>
+        <ion-item lines="none">
+          <ion-label>Excelente</ion-label>
+          <ion-radio slot="start" color="primary" value="e"></ion-radio>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Muy Bueno</ion-label>
+          <ion-radio slot="start" color="primary" value="m"></ion-radio>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Bueno</ion-label>
+          <ion-radio slot="start" color="primary" value="b"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-item>
+  
+  <ion-button class="ion-margin-top" expand="block" (click)="escanearCodigoBarra()">Escanear</ion-button>
+  
+  <!-- <ion-button color="danger" expand="block" (click)="capturarImagen()">Tomar Fotografia</ion-button> -->
+  <!-- <hr>
+    <img *ngIf="image" [src]="image" alt="image">
+    <ion-button (click)="insertEvidencia()" *ngIf="image" color="primary" expand="block">Ingresar Registro</ion-button>
+  -->
+  <!-- <ion-button  *ngFor="let item of (lista_evidencias)"  color="{{ item.color_evidencia }}"  (click)="separadorFuncion(item.funcion_evidencia,item.id_evidencia)"  expand="block">{{item.desc_evidencia}}</ion-button>
+    <hr>
+    <img *ngIf="image" [src]="image" alt="image">
+    <ion-button (click)="insertEvidencia()" *ngIf="image" color="primary" expand="block">Ingresar evidencia !</ion-button> -->
+  </ion-content> 
+  

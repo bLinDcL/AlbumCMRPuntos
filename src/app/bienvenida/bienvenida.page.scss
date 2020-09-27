@@ -1,0 +1,35 @@
+#map_canvas {
+    width: 90%;
+    height: 80%;
+    border: 1px solid red;
+  }
+   
+
+   
+  #address {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #datos{
+    font-weight:bold;
+    font-size: 20px;
+  }
+   
+  
+   
+  .map-wrapper {
+    position: relative;
+   
+    #map_center {
+      position: absolute;
+      z-index: 99;
+      height: 40px;
+      width: 40px;
+      top: 50%;
+      left: 50%;
+      margin-left: -21px;
+      margin-top: -41px;
+    }
+  }

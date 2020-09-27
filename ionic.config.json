@@ -1,0 +1,8 @@
+{
+  "name": "JumboSurlat",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
